@@ -1,3 +1,31 @@
 .logo {
   width: 150px;
+  margin-top: -8px;
+
+}
+
+.navbar-custom{
+  background-color: #5a0c12;
+  height: 85px;
+}
+
+.jumbotron{
+  position: relative;
+  margin-top: -8px;
+  color: #5a0c12;
+  font-weight: bold;
+  font-family: 'Fredericka the Great', cursive;
+}
+.jumbotron:after{
+  content: "";
+  display: block;
+  background: url('../images/razor_fence.jpg') no-repeat center center scroll;
+  background-size: cover;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
 }
