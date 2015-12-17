@@ -9,23 +9,72 @@
   height: 85px;
 }
 
-.jumbotron{
+.dropdown-menu{
+  background-color: #5a0c12;
+}
+
+.bring-up{
+  margin-top: -4%;
+  margin-bottom: 2%;
+  font-family: "Book Antiqua", cursive;
+}
+
+.navbar ul a{
+  color: white;
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 1.3em;
+  margin: 10%;
+}
+
+aside{
+  margin-top: 5%;
+  margin-bottom: 10%;
+}
+
+aside p {
+  font-family: "Book Antiqua", cursive;
+}
+.main-text{
+  font-family: "Book Antiqua";
+  font-size: 1.2em;
+}
+.hero {
   position: relative;
-  margin-top: -8px;
+  margin-top: -1%;
+  margin-bottom: 2%;
   color: #5a0c12;
   font-weight: bold;
   font-family: 'Fredericka the Great', cursive;
+  font-size: 1.5em;
+  padding: 5%;
 }
-.jumbotron:after{
+
+.hero h1{
+  font-size: 2.5em;
+}
+
+.hero:after{
   content: "";
   display: block;
   background: url('../images/razor_fence.jpg') no-repeat center center scroll;
   background-size: cover;
-  opacity: 0.5;
+  opacity: 0.35;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
   position: absolute;
   z-index: -1;
+}
+
+footer{
+  background: #5a0c12;
+  color: white;
+  font-size: 0.8em;
+  padding: 1%;
+}
+
+span.tag{
+  font-size: 0.7em;
+  font-family: cursive;
 }
