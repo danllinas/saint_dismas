@@ -1,12 +1,14 @@
-.logo {
-  width: 150px;
-  margin-top: -8px;
-
-}
-
 .navbar-custom{
   background-color: #5a0c12;
-  height: 85px;
+  height: 235px;
+}
+
+.navbar-wrapper{
+  height: 235px;
+}
+
+.logo {
+  width: 125px;
 }
 
 .dropdown-menu{
@@ -19,11 +21,10 @@
   font-family: "Book Antiqua", cursive;
 }
 
-.navbar ul a{
-  color: white;
+nav a{
+  color: white !important;
   font-family: 'Fredericka the Great', cursive;
   font-size: 1.3em;
-  margin-top: 10%;
 }
 
 aside{
@@ -34,9 +35,10 @@ aside{
 aside p {
   font-family: "Book Antiqua", cursive;
 }
+
 .main-text{
   font-family: "Book Antiqua";
-  font-size: 1.2em;
+  font-size: 1.25em;
 }
 .hero {
   position: relative;
@@ -56,9 +58,9 @@ aside p {
 .hero:after{
   content: "";
   display: block;
-  background: url('../images/razor_fence.jpg') no-repeat center center scroll;
+  background: url('../images/cell_light.jpg') no-repeat center center scroll;
   background-size: cover;
-  opacity: 0.35;
+  opacity: 0.7;
   top: 0;
   left: 0;
   bottom: 0;
