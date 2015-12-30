@@ -7,7 +7,7 @@ scroll = function (){
   var height = $("nav").height();
 
   if ($(window).scrollTop() >= height){
-    $("nav").addClass("navbar-fixed-top").height( 100 );
+    $("nav").addClass("navbar-fixed-top").height( 85 );
     $(".navbar-brand img").addClass("logo");
     console.log("WORKING");
   } else {
