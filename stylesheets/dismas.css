@@ -18,13 +18,37 @@
 .bring-up{
   margin-top: -4%;
   margin-bottom: 2%;
-  font-family: "Book Antiqua", cursive;
+  font-family: cursive;
+}
+
+.bring-up img{
+  width: 600px;
+  margin-top: -4%;
+}
+
+.dont-bring-up{
+  margin-bottom: 2%;
+  font-family: cursive;
+}
+
+.dont-bring-up img{
+  width: 600px;
+}
+
+.main-column-img{
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+.cursive{
+  font-family: cursive;
 }
 
 nav a{
   color: white !important;
   font-family: 'Fredericka the Great', cursive;
   font-size: 1.3em;
+  background-color: #5a0c12;
+
 }
 
 aside{
@@ -33,7 +57,7 @@ aside{
 }
 
 aside p {
-  font-family: "Book Antiqua", cursive;
+  font-family: cursive;
 }
 
 .main-text{
@@ -42,25 +66,27 @@ aside p {
 }
 .hero {
   position: relative;
-  margin-top: -1%;
+  margin-top: -0.5%;
   margin-bottom: 2%;
   color: #5a0c12;
-  font-weight: bold;
+  font-weight: 900;
   font-family: 'Fredericka the Great', cursive;
   font-size: 1.5em;
-  padding: 5%;
+  padding-top: 2%;
+  padding-bottom: 15%;
 }
 
 .hero h1{
   font-size: 2.5em;
+  font-weight: 900;
 }
 
 .hero:after{
   content: "";
   display: block;
-  background: url('../images/cell_light.jpg') no-repeat center center scroll;
+  background: url('../images/razor_fence2.jpg') no-repeat center center scroll;
   background-size: cover;
-  opacity: 0.7;
+  opacity: 0.5;
   top: 0;
   left: 0;
   bottom: 0;

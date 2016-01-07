@@ -10,13 +10,12 @@ scroll = function (){
     if ($(window).scrollTop() >= height){
       $("nav").addClass("navbar-fixed-top").height( 85 );
       $(".navbar-brand img").addClass("logo");
-      console.log("WORKING");
     } else {
       $("nav").removeClass("navbar-fixed-top").height( 235 );
       $(".navbar-brand img").removeClass("logo");
     }
   }
-  
+
 };
 
 $(document).scroll(scroll);
