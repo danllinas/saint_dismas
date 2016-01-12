@@ -8,7 +8,7 @@
 }
 
 .logo {
-  width: 125px;
+  width: 175px;
 }
 
 .dropdown-menu{
@@ -18,29 +18,38 @@
 .bring-up{
   margin-top: -4%;
   margin-bottom: 2%;
-  font-family: cursive;
-}
+  font-family: "Lato";
+  font-style: italic;}
 
 .bring-up img{
   width: 600px;
   margin-top: -4%;
 }
 
-.dont-bring-up{
+p.bring-down{
+  margin-top: 2%;
+}
+
+/*.dont-bring-up{
   margin-bottom: 2%;
-  font-family: cursive;
+  font-family: "Lato";
+  font-style: italic;
 }
 
 .dont-bring-up img{
   width: 600px;
-}
+}*/
 
 .main-column-img{
   margin-top: 2%;
   margin-bottom: 2%;
 }
 .cursive{
-  font-family: cursive;
+  font-family: "Lato";
+  font-style: italic;
+}
+.larger{
+  font-size: 1.2em;
 }
 
 nav a{
@@ -57,7 +66,9 @@ aside{
 }
 
 aside p {
-  font-family: cursive;
+  font-family: "Lato";
+  font-style: italic;
+  font-weight: 900;
 }
 
 .main-text{
@@ -98,7 +109,7 @@ aside p {
 footer{
   background: #5a0c12;
   color: white;
-  font-size: 0.8em;
+  font-size: 1.0em;
   padding: 1%;
 }
 

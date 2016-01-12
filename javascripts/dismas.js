@@ -8,7 +8,7 @@ scroll = function (){
 
   if (screen.width > 600) {
     if ($(window).scrollTop() >= height){
-      $("nav").addClass("navbar-fixed-top").height( 85 );
+      $("nav").addClass("navbar-fixed-top").height( 115 );
       $(".navbar-brand img").addClass("logo");
     } else {
       $("nav").removeClass("navbar-fixed-top").height( 235 );
