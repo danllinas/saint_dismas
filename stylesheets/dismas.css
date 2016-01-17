@@ -42,6 +42,7 @@ p.bring-down{
 .cursive{
   font-family: "Lato";
   font-style: italic;
+  font-weight: 900;
 }
 .larger{
   font-size: 1.2em;
