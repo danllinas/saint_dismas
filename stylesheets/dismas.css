@@ -7,6 +7,10 @@
   height: 235px;
 }
 
+img.side-image{
+  width: 200px;
+}
+
 .logo {
   width: 175px;
 }
@@ -29,16 +33,6 @@
 p.bring-down{
   margin-top: 2%;
 }
-
-/*.dont-bring-up{
-  margin-bottom: 2%;
-  font-family: "Lato";
-  font-style: italic;
-}
-
-.dont-bring-up img{
-  width: 600px;
-}*/
 
 .main-column-img{
   margin-top: 2%;
@@ -82,10 +76,15 @@ aside p {
   margin-bottom: 2%;
   color: #5a0c12;
   font-weight: 900;
-  font-family: 'Fredericka the Great', cursive;
+  font-family: 'Fredericka the Great';
   font-size: 1.5em;
   padding-top: 2%;
   padding-bottom: 15%;
+}
+
+.ftg{
+  font-family: 'Fredericka the Great';
+  color: #5a0c12;
 }
 
 .hero h1{
