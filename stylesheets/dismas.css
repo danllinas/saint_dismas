@@ -3,6 +3,15 @@
   height: 235px;
 }
 
+.text-center .img-responsive {
+  display: inline-block;
+}
+
+.navbar-brand {
+  display: inline-block;
+  max-width: 100%;
+}
+
 .navbar-wrapper{
   height: 235px;
 }
@@ -71,6 +80,7 @@ aside p {
   font-family: "Book Antiqua";
   font-size: 1.25em;
 }
+
 .hero {
   position: relative;
   margin-top: -0.5%;
@@ -79,8 +89,7 @@ aside p {
   font-weight: 900;
   font-family: 'Fredericka the Great';
   font-size: 1.5em;
-  padding-top: 2%;
-  padding-bottom: 15%;
+  padding: 2% 15px 15%;
 }
 
 .ftg{
