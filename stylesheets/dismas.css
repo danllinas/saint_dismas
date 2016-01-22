@@ -18,6 +18,7 @@
 
 img.side-image{
   width: 200px;
+  margin: 10% 0;
 }
 
 .logo {
@@ -39,7 +40,7 @@ img.side-image{
   margin-top: -4%;
 }
 
-p.bring-down{
+.bring-down{
   margin-top: 2%;
 }
 
@@ -48,10 +49,15 @@ p.bring-down{
   margin-bottom: 2%;
   width: 75%;
 }
+
 .cursive{
   font-family: "Lato";
   font-style: italic;
   font-weight: 900;
+}
+figcaption{
+  margin-top: -2%;
+  margin-bottom: 5%;
 }
 .larger{
   font-size: 1.2em;
