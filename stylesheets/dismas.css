@@ -15,7 +15,7 @@
 
 img.side-image{
   width: 200px;
-  margin: 10% 0;
+  margin: 5% 0;
 }
 
 .logo {
@@ -65,15 +65,11 @@ nav a{
 
 }
 
-aside{
-  margin-top: 5%;
-  margin-bottom: 10%;
-}
-
 aside p {
   font-family: "Lato";
   font-style: italic;
   font-weight: 900;
+  margin-top: 2%;
 }
 
 .main-text{
