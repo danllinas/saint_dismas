@@ -153,12 +153,17 @@ span.tag{
   background-color: #5a0c12 !important;
 
 }
-.navbar-fixed-top + .container-fluid{
-  padding-top: 100px;
-}
+
+.navbar-wrapper{
+  height: 233px;
+} /*trying to fix the nav jump*/
 
 
 @media (min-width: 995px) {
+
+  .navbar-wrapper{
+    height: 287px;
+  }/*trying to fix the nav jump*/
 
   .navbar-collapse > ul{
     display: table;
@@ -181,6 +186,9 @@ span.tag{
   .navbar-brand {
     margin-top: 50px;
   }
+  .navbar-wrapper{
+    height: auto;
+  }/*trying to fix the nav jump*/
 }
 
 @media (max-width: 600px){
