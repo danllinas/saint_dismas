@@ -2,7 +2,7 @@ $(window).load(function(){
   height = $(".navbar-wrapper").height();
 });
 
-height = 0;
+// height = 0;
 
 scroll = function (){
   if ($(window).scrollTop() >= height){

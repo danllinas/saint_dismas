@@ -153,9 +153,12 @@ span.tag{
   background-color: #5a0c12 !important;
 
 }
+.navbar-fixed-top + .container-fluid{
+  padding-top: 100px;
+}
 
 
-@media (min-width: 840px) {
+@media (min-width: 995px) {
 
   .navbar-collapse > ul{
     display: table;
