@@ -5,9 +5,14 @@ $(window).load(function(){
 // height = 0;
 
 scroll = function (){
-  if ($(window).scrollTop() >= height){
-    $("nav").addClass("navbar-fixed-top");
-    $(".navbar-brand img").addClass("logo");
+  if ($(window).width() >= 600){
+    if ($(window).scrollTop() >= height){
+      $("nav").addClass("navbar-fixed-top");
+      $(".navbar-brand img").addClass("logo");
+    } else {
+      $("nav").removeClass("navbar-fixed-top");
+      $(".navbar-brand img").removeClass("logo");
+    }
   } else {
     $("nav").removeClass("navbar-fixed-top");
     $(".navbar-brand img").removeClass("logo");

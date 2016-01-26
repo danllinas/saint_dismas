@@ -185,13 +185,13 @@ span.tag{
   .navbar-wrapper{
     height: auto;
   }/*trying to fix the nav jump*/
+
 }
 
 @media (max-width: 600px){
   .navbar-fixed-top {
     min-height: 0;
     height: 0;
-
   }
   .navbar-fixed-top .navbar-brand {
     padding: 0;
