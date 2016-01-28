@@ -5,7 +5,7 @@ $(window).load(function(){
 // height = 0;
 
 scroll = function (){
-  if ($(window).width() >= 600){
+
     if ($(window).scrollTop() >= height){
       $("nav").addClass("navbar-fixed-top");
       $(".navbar-brand img").addClass("logo");
@@ -13,10 +13,7 @@ scroll = function (){
       $("nav").removeClass("navbar-fixed-top");
       $(".navbar-brand img").removeClass("logo");
     }
-  } else {
-    $("nav").removeClass("navbar-fixed-top");
-    $(".navbar-brand img").removeClass("logo");
-  }
+
 };
 
 $(document).scroll(scroll);

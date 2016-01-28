@@ -152,7 +152,10 @@ span.tag{
 
 .navbar-wrapper{
   height: 233px;
+  position: relative;
+  z-index: 100;
 } /*trying to fix the nav jump*/
+
 
 
 @media (min-width: 995px) {
