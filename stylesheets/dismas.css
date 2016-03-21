@@ -65,6 +65,11 @@ nav a{
 
 }
 
+label{
+  font-family: 'Fredericka the Great', cursive;
+  color: #5a0c12;
+}
+
 aside p {
   font-family: "Lato";
   font-style: italic;
@@ -156,6 +161,9 @@ span.tag{
   z-index: 100;
 } /*trying to fix the nav jump*/
 
+#donate {
+  display: none;
+}
 
 
 @media (min-width: 995px) {

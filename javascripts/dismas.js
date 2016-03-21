@@ -17,3 +17,7 @@ scroll = function (){
   }
 
 };
+
+$('#trigger').on('click', function(){
+  $('#donate').slideToggle();
+});
