@@ -13,6 +13,11 @@
   height: auto;
 }
 
+.inline-inputs{
+  width: 25%;
+  display: inline-block;
+}
+
 img.side-image{
   width: 200px;
   margin: 5% 0;
