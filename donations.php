@@ -1,7 +1,50 @@
 <?php
+
+  require_once('stripe-php/init.php');
+  require_once('PHPMailer/PHPMailerAutoload.php');
   if(!empty($_POST)){
-    var_dump($_POST);
-    exit;
+    Stripe\Stripe::setApiKey("sk_test_fp7u7ZJwIAU4NqsK7dxCiR70");
+
+// Get the credit card details submitted by the form
+    $token = $_POST['stripeToken'];
+    // Create the charge on Stripe's servers - this will charge the user's card
+    try {
+      $charge = \Stripe\Charge::create(array(
+        "amount" => 1000, // write the amount in cents, here
+        "currency" => "usd",
+        "source" => $token,
+        "description" => "Example charge"
+        ));
+      $mail = new PHPMailer;
+
+      //From email address and name
+      $mail->From = "adnan.mate3n@gmail.com";
+      $mail->FromName = "Adnan Mateen";
+
+      //To address and name
+      $mail->addAddress("adnanmateen@outlook.com", "Recepient Name");
+      
+      //Send HTML or Plain Text email
+      $mail->isHTML(true);
+
+      $mail->Subject = "Subject Text";
+      $mail->Body = "<i>Mail body in HTML</i>";
+      $mail->AltBody = "This is the plain text version of the email content";
+
+      if(!$mail->send()) 
+      {
+          echo "Mailer Error: " . $mail->ErrorInfo;
+      } 
+      else 
+      {
+          echo "Message has been sent successfully";
+      }
+    } catch(Exception $e) {
+      // The card has been declined
+      echo "<script>alert(\"Card Has been Declined\")</script>";
+    }
+
+   
   }
  ?>
 <!DOCTYPE html>
@@ -16,9 +59,11 @@
   <link rel="stylesheet" type="text/css" href="stylesheets/dismas.css">
   <link href='https://fonts.googleapis.com/css?family=Fredericka+the+Great' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+
   <title>Saint Dismas - How to Help</title>
 </head>
 <body>
+
   <div class="navbar-wrapper" id="nav-partial">
     <nav class="navbar navbar-default navbar-custom">
       <div class="container-fluid">
@@ -115,7 +160,7 @@
         <div class="container-fluid text-left">
           <div class="row">
             <div class="col-xs-8 col-xs-offset-2 text-center" id="donate">
-              <form action="donations.php" method="post" class="form-horizontal">
+              <form action="donations.php" method="post" class="form-horizontal" id="donation-form">
                 <span class="payment-errors"></span>
                 <div class="form-group">
                   <label for="firstName" class="col-xs-3">First Name</label>
@@ -234,7 +279,11 @@
   <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
   <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
   <script src="javascripts/dismas.js"></script>
+  
+
+
 </body>
 
 </html>
