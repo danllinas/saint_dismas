@@ -35,6 +35,7 @@ jQuery(function($) {
     return false;
   });
 });
+
 function stripeResponseHandler(status, response) {
   var $form = $('#donation-form');
 

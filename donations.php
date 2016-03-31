@@ -3,7 +3,7 @@
   require_once('stripe-php/init.php');
   require_once('PHPMailer/PHPMailerAutoload.php');
   if(!empty($_POST)){
-    Stripe\Stripe::setApiKey("sk_test_fp7u7ZJwIAU4NqsK7dxCiR70");
+    Stripe\Stripe::setApiKey("sk_test_fp7u7ZJwIAU4NqsK7dxCiR70"); //<- stripe secret key. Find out about environment variables.
 
 // Get the credit card details submitted by the form
     $token = $_POST['stripeToken'];
@@ -23,7 +23,7 @@
 
       //To address and name
       $mail->addAddress("adnanmateen@outlook.com", "Recepient Name");
-      
+
       //Send HTML or Plain Text email
       $mail->isHTML(true);
 
@@ -31,11 +31,11 @@
       $mail->Body = "<i>Mail body in HTML</i>";
       $mail->AltBody = "This is the plain text version of the email content";
 
-      if(!$mail->send()) 
+      if(!$mail->send())
       {
           echo "Mailer Error: " . $mail->ErrorInfo;
-      } 
-      else 
+      }
+      else
       {
           echo "Message has been sent successfully";
       }
@@ -44,9 +44,10 @@
       echo "<script>alert(\"Card Has been Declined\")</script>";
     }
 
-   
+
   }
  ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -281,7 +282,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
   <script src="javascripts/dismas.js"></script>
-  
+
 
 
 </body>
