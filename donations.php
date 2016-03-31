@@ -27,7 +27,7 @@
       //Send HTML or Plain Text email
       $mail->isHTML(true);
 
-      $mail->Subject = "Subject Text";
+      $mail->Subject = "Donor Information";
       $mail->Body = "<i>Mail body in HTML</i>";
       $mail->AltBody = "This is the plain text version of the email content";
 
@@ -169,7 +169,7 @@
                     <select class="form-control">
                       <option value="500">$5</option>
                       <option value="1000">$10</option>
-                      <option value="2000">$20</option>
+                      <option value="2000" selected>$20</option>
                       <option value="3500">$35</option>
                       <option value="5000">$50</option>
                       <option value="10000">$100</option>
