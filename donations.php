@@ -164,6 +164,22 @@
               <form action="donations.php" method="post" class="form-horizontal" id="donation-form">
                 <span class="payment-errors"></span>
                 <div class="form-group">
+                  <label for="amount" class="col-xs-3">Donation Amount</label>
+                  <div class="col-xs-9">
+                    <select class="form-control">
+                      <option value="500">$5</option>
+                      <option value="1000">$10</option>
+                      <option value="2000">$20</option>
+                      <option value="3500">$35</option>
+                      <option value="5000">$50</option>
+                      <option value="10000">$100</option>
+                      <option value="25000">$250</option>
+                      <option value="50000">$500</option>
+                      <option value="100000">$1000</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
                   <label for="firstName" class="col-xs-3">First Name</label>
                   <div class="col-xs-9">
                     <input type="text" name="firstName" class="form-control">
