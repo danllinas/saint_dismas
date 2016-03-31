@@ -22,7 +22,7 @@
       $mail->FromName = "Adnan Mateen";
 
       //To address and name
-      $mail->addAddress("adnanmateen@outlook.com", "Recepient Name");
+      $mail->addAddress("danllinas@gmail.com", "Deacon Don");
 
       //Send HTML or Plain Text email
       $mail->isHTML(true);
