@@ -21,7 +21,6 @@ scroll = function (){
 $('#trigger').on('click', function(){
   $('#donate').slideToggle();
 });
-Stripe.setPublishableKey('pk_test_M9SVdeGO1qJ5O62WnWuNMggY');
 jQuery(function($) {
   $('#donation-form').submit(function(event) {
     var $form = $(this);

@@ -1,53 +1,4 @@
-<?php
-
-  require_once('stripe-php/init.php');
-  require_once('PHPMailer/PHPMailerAutoload.php');
-  if(!empty($_POST)){
-    Stripe\Stripe::setApiKey("sk_test_fp7u7ZJwIAU4NqsK7dxCiR70"); //<- stripe secret key. Find out about environment variables.
-
-// Get the credit card details submitted by the form
-    $token = $_POST['stripeToken'];
-    // Create the charge on Stripe's servers - this will charge the user's card
-    try {
-      $charge = \Stripe\Charge::create(array(
-        "amount" => 1000, // write the amount in cents, here
-        "currency" => "usd",
-        "source" => $token,
-        "description" => "Example charge"
-        ));
-      $mail = new PHPMailer;
-
-      //From email address and name
-      $mail->From = "adnan.mate3n@gmail.com";
-      $mail->FromName = "Adnan Mateen";
-
-      //To address and name
-      $mail->addAddress("danllinas@gmail.com", "Deacon Don");
-
-      //Send HTML or Plain Text email
-      $mail->isHTML(true);
-
-      $mail->Subject = "Donor Information";
-      $mail->Body = "<i>Mail body in HTML</i>";
-      $mail->AltBody = "This is the plain text version of the email content";
-
-      if(!$mail->send())
-      {
-          echo "Mailer Error: " . $mail->ErrorInfo;
-      }
-      else
-      {
-          echo "Message has been sent successfully";
-      }
-    } catch(Exception $e) {
-      // The card has been declined
-      echo "<script>alert(\"Card Has been Declined\")</script>";
-    }
-
-
-  }
- ?>
-
+<?php require_once('constants.php'); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -161,12 +112,12 @@
         <div class="container-fluid text-left">
           <div class="row">
             <div class="col-xs-8 col-xs-offset-2 text-center" id="donate">
-              <form action="donations.php" method="post" class="form-horizontal" id="donation-form">
+              <form action="process_donations.php" method="post" class="form-horizontal" id="donation-form">
                 <span class="payment-errors"></span>
                 <div class="form-group">
                   <label for="amount" class="col-xs-3">Donation Amount</label>
                   <div class="col-xs-9">
-                    <select class="form-control">
+                    <select class="form-control" name="amount">
                       <option value="500">$5</option>
                       <option value="1000">$10</option>
                       <option value="2000" selected>$20</option>
@@ -200,7 +151,7 @@
                 <div class="form-group">
                   <label for="address" class="col-xs-3">Address</label>
                   <div class="col-xs-9">
-                    <input type="text" name="Address" class="form-control">
+                    <input type="text" name="address" class="form-control">
                   </div>
                 </div>
                 <div class="form-group">
@@ -297,6 +248,9 @@
   <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+  <script>
+    Stripe.setPublishableKey('<?php echo STRIPE_PUBLIC_KEY ?>');
+  </script>
   <script src="javascripts/dismas.js"></script>
 
 
