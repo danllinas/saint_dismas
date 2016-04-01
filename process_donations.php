@@ -1,5 +1,4 @@
 <?php
-  ini_set('display_errors', 1);
   require_once('constants.php');
    if(!empty($_POST)){
     require_once('stripe-php/init.php');
@@ -30,19 +29,20 @@
       
     } catch(Exception $e) {
       // The card has been declined
-      echo "<script>alert(\"Card Has been Declined\")</script>";
+      echo "<script>alert(\"Card Has been Declined\");</script>";
+
     }
     if(isset($charge)){
         $mail = new PHPMailer;
-        $mail->isSMTP();                                      // Set mailer to use SMTP
-        $mail->Host = SMTP_HOST;  // Specify main and backup SMTP servers
-        $mail->SMTPAuth = true;                               // Enable SMTP authentication
-        $mail->Username = SMTP_USER;                 // SMTP username
-        $mail->Password = SMTP_PASSWORD;                           // SMTP password
-        $mail->SMTPSecure = SMTP_SECURE;                            // Enable TLS encryption, `ssl` also accepted
-        $mail->Port = SMTP_PORT;         
+        // $mail->isSMTP();                                      // Set mailer to use SMTP
+        // $mail->Host = SMTP_HOST;  // Specify main and backup SMTP servers
+        // $mail->SMTPAuth = true;                               // Enable SMTP authentication
+        // $mail->Username = SMTP_USER;                 // SMTP username
+        // $mail->Password = SMTP_PASSWORD;                           // SMTP password
+        // $mail->SMTPSecure = SMTP_SECURE;                            // Enable TLS encryption, `ssl` also accepted
+        // $mail->Port = SMTP_PORT;         
         //From email address and name
-        $mail->From = SMTP_USER;
+        $mail->From = "system@saintdismas.com";
         $mail->FromName = $name;
 
         //To address and name
@@ -54,9 +54,8 @@
         $mail->Subject = "Donor Information";
         $mail->Body = $body;
         $mail->send();
-        
     }
-    header('Location: donations.php');
+    echo "<script>window.location = 'donations.php';</script>";
     // require('_alt_email.php');
     // $mail->AltBody = $altBody;
 
