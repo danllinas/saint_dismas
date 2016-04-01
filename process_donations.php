@@ -46,7 +46,7 @@
         $mail->FromName = $name;
 
         //To address and name
-        $mail->addAddress(SMTP_USER, "Deacon Don");
+        $mail->addAddress("system.saint.dismas@gmail.com", "Deacon Don"); // Change this email to deacon's email
 
         //Send HTML or Plain Text email
         $mail->isHTML(true);
