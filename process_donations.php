@@ -47,7 +47,7 @@
         $mail->FromName = $name;
 
         //To address and name
-        $mail->addAddress("danllinas@gmail.com", "Deacon Don"); // Change this email to deacon's email
+        $mail->addAddress("battiston@yahoo.com", "Deacon Don"); // Change this email to deacon's email
 
         //Send HTML or Plain Text email
         $mail->isHTML(true);
