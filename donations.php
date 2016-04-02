@@ -199,7 +199,7 @@
                   </div>
                 </div>
                 <div class="col-xs-9 col-xs-offset-3 text-center">
-                  <input type="submit" class="btn btn-lg" style="color:white;background-color:#5a0c12;font-family:'Fredericka the Great',cursive;">
+                  <input type="submit" class="btn btn-lg" value="Submit" style="color:white;background-color:#5a0c12;font-family:'Fredericka the Great',cursive;">
                 </div>
               </form>
             </div>
