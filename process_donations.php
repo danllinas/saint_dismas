@@ -3,7 +3,7 @@
    if(!empty($_POST)){
     require_once('stripe-php/init.php');
     require_once('PHPMailer/PHPMailerAutoload.php');
-    
+
 
     Stripe\Stripe::setApiKey(STRIPE_SECRET_KEY); //<- stripe secret key. Find out about environment variables.
 
@@ -26,7 +26,7 @@
         "source" => $token,
         "description" => "Donation from saintdismas website"
         ));
-      
+
     } catch(Exception $e) {
       // The card has been declined
       echo "<script>alert(\"Card Has been Declined\");</script>";
@@ -40,13 +40,13 @@
         // $mail->Username = SMTP_USER;                 // SMTP username
         // $mail->Password = SMTP_PASSWORD;                           // SMTP password
         // $mail->SMTPSecure = SMTP_SECURE;                            // Enable TLS encryption, `ssl` also accepted
-        // $mail->Port = SMTP_PORT;         
+        // $mail->Port = SMTP_PORT;
         //From email address and name
         $mail->From = "system@saintdismas.com";
         $mail->FromName = $name;
 
         //To address and name
-        $mail->addAddress("system.saint.dismas@gmail.com", "Deacon Don"); // Change this email to deacon's email
+        $mail->addAddress("danllinas@gmail.com", "Deacon Don"); // Change this email to deacon's email
 
         //Send HTML or Plain Text email
         $mail->isHTML(true);
@@ -59,7 +59,7 @@
     // require('_alt_email.php');
     // $mail->AltBody = $altBody;
 
-    
+
 
   }
  ?>
