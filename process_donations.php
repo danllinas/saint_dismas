@@ -30,8 +30,9 @@
     } catch(Exception $e) {
       // The card has been declined
       echo "<script>alert(\"Card Has been Declined\");</script>";
-
+      echo "<script>window.location = 'donations.php';</script>";
     }
+
     if(isset($charge)){
         $mail = new PHPMailer;
         // $mail->isSMTP();                                      // Set mailer to use SMTP
@@ -54,12 +55,12 @@
         $mail->Subject = "Donor Information";
         $mail->Body = $body;
         $mail->send();
+
+        echo "<script>alert(\"Your donation has been processed.\");</script>";
+        echo "<script>window.location = 'thank-you.html';</script>";
     }
-    echo "<script>window.location = 'donations.php';</script>";
+
     // require('_alt_email.php');
     // $mail->AltBody = $altBody;
-
-
-
   }
  ?>
